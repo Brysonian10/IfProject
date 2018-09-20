@@ -41,7 +41,9 @@ public class IfController
 				 }
 		 //Asks for the price of the car
 		 String price = JOptionPane.showInputDialog(null, "How much exactly do you think your car is worth?");
-		 if (price >15000)
+		 if (price > "15000" ) {
+			 
+		 }
 		 
 		 
 		 
