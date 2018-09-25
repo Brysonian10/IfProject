@@ -19,6 +19,11 @@ public class IfController
 	
 	public void start()
 	{
+		newLoop();
+	}
+	
+	public void userStart()
+	{
 		//introduces the user to what this program does.
 		JOptionPane.showMessageDialog(null, "Welcome to MAKE YOUR DREAM CAR!!");
 		
@@ -41,16 +46,51 @@ public class IfController
 				 }
 		 //Asks for the price of the car
 		 String price = JOptionPane.showInputDialog(null, "How much exactly do you think your car is worth?");
-		 if (price > "15000" ) {
+		
 			 
 		 }
-		 
-		 
-		 
-		 
-		 
+	
+	private void loopy()
+	{
+		//define variable before loop
+		boolean isDone = false;
+		int count = 0;
+		
+		while (!isDone) //test the variable
+		{
+			JOptionPane.showMessageDialog(null, "brother may I have some looooooops??");
+			//Eventually change the loop variable
+			count++;
+			if(count > 10)
+			{
+				isDone = true; //update variable
+			}
+			
+		}
 		
 		
 	}
+		 	
+	
+		private void newLoop()
+		{
+			boolean toDo = false;
+			int count = 10;
+			
+			while(!toDo)
+			{
+				JOptionPane.showMessageDialog(null, "You still have things to do");
+				count--;
+				if(count < 0)
+				{
+					toDo = true;
+				}
+			}
+		
+		}
+	
+	
+		
+	}
 
-}
+
