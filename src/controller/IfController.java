@@ -86,10 +86,43 @@ public class IfController
 					toDo = true;
 				}
 			}
+			
+			for (int loop = 0; loop < 30; loop +=2)
+			{
+				JOptionPane.showMessageDialog(null, "The loop value is: " + loop);
+			}
 		
 		}
+		
+		public boolean validDouble(String maybeDouble)
+		{
+			boolean isValid = false;
+			
+			try
+			{
+				Double.parseDouble(maybeDouble);
+				isValid = true;
+			}
+			catch(NumberFormatException error)
+			{
+				JOptionPane.showMessageDialog(null, "This requires a double value aka something with a . >");
+			}
+			
+			
+			
+			return isValid;
+		}
+		
 	
-	
+		private void askUser()
+		{
+			String response = JOptionPane.showInputDialog(null, "How much is the car?");
+			while (!validDouble(response))
+			{
+				response = JOptionPane.showInputDialog(null, "No!, type in a valid number for the price!!");
+			}
+				
+		}
 		
 	}
 
