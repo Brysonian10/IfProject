@@ -20,7 +20,8 @@ public class IfController
 	public void start()
 	{
 		//newLoop();
-		askUser();
+		//askUser();
+		userStart();
 	}
 	
 	public void userStart()
@@ -46,7 +47,17 @@ public class IfController
 					 JOptionPane.showMessageDialog(null, "Your car isn't a convertible, but that's ok it is still super cool.");
 				 }
 		 //Asks for the price of the car
-		 String price = JOptionPane.showInputDialog(null, "How much exactly do you think your car is worth?");
+		//ask
+			String response = JOptionPane.showInputDialog(null, "How much is the car?");
+			UserCar userCar = new UserCar();
+			//repeat until finished correctly
+			while (!validDouble(response))
+			{
+				response = JOptionPane.showInputDialog(null, "No!, type in a valid number for the price!!");
+			}
+			//assign
+			userCar.setPrice(Double.parseDouble(response));
+				
 		
 			 
 		 }
