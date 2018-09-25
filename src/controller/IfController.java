@@ -19,7 +19,8 @@ public class IfController
 	
 	public void start()
 	{
-		newLoop();
+		//newLoop();
+		askUser();
 	}
 	
 	public void userStart()
@@ -94,6 +95,25 @@ public class IfController
 		
 		}
 		
+		public boolean validInt(String maybeInt)
+		{
+			boolean isValid = false;
+			try
+			{
+				Integer.parseInt(maybeInt);
+				isValid = true;
+			}
+			catch(NumberFormatException error) 
+			{
+				JOptionPane.showMessageDialog(null, "Your should type an interger value like -989087");
+				
+			}
+			
+			
+			return isValid;
+		}
+		
+		
 		public boolean validDouble(String maybeDouble)
 		{
 			boolean isValid = false;
@@ -116,11 +136,16 @@ public class IfController
 	
 		private void askUser()
 		{
+			//ask
 			String response = JOptionPane.showInputDialog(null, "How much is the car?");
+			UserCar userCar = new UserCar();
+			//repeat until finished correctly
 			while (!validDouble(response))
 			{
 				response = JOptionPane.showInputDialog(null, "No!, type in a valid number for the price!!");
 			}
+			//assign
+			userCar.setPrice(Double.parseDouble(response));
 				
 		}
 		
