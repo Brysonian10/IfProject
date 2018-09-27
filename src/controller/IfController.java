@@ -40,6 +40,13 @@ public class IfController
 		 
 		 //Asks if the car has a roof, if yes, tells the user, if not then tells the user it doesn't have one
 		 String roof = JOptionPane.showInputDialog(null, "Is your car a convertible?");
+		if(roof == null || roof.equalsIgnoreCase(""))
+		{
+			JOptionPane.showMessageDialog(null, "You either pressed cancel, the x, or typed nothing >:[ ");
+		}
+		 
+		 
+		 
 		 if( roof .equals("yes"))
 				 {
 			 JOptionPane.showMessageDialog(null, "Your car is a convertible, that is so cool!!");
@@ -178,6 +185,13 @@ public class IfController
 			//assign
 			userCar.setPrice(Double.parseDouble(response));
 				
+		}
+		
+		public String toString()
+		{
+			
+			String description = "";
+			return description;
 		}
 		
 		
