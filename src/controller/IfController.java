@@ -48,7 +48,6 @@ public class IfController
 					 JOptionPane.showMessageDialog(null, "Your car isn't a convertible, but that's ok it is still super cool.");
 				 }
 		 //Asks for the price of the car
-		//ask
 			String response = JOptionPane.showInputDialog(null, "How much is the car?");
 			UserCar userCar = new UserCar();
 			//repeat until finished correctly
@@ -58,9 +57,9 @@ public class IfController
 			}
 			//assign
 			userCar.setPrice(Double.parseDouble(response));
-			
+			//shows the toString in the model to explain to the user what they have done so far
 			JOptionPane.showMessageDialog(null, userCar);
-			
+			//asks what color they want
 			String color = JOptionPane.showInputDialog(null, "What color is " + userCarName + "?");
 			JOptionPane.showMessageDialog(null, "Your car is " + color + "!");
 			
@@ -70,17 +69,19 @@ public class IfController
 			
 				
 		
-			 
+			 //this is where the for loop is to ask the user 3 times the questions above.
 		 }
 	
 	private void loopy()
 	{
-		
+		//this is the loop
 		for (int ask = 0; ask < 3; ask += 1)
 		{
 			userStart();
 		}
 		
+		
+		//this is random code that i put in here to learn how to do it, it's honestly useless.
 		
 		//define variable before loop
 		boolean isDone = false;
@@ -101,7 +102,7 @@ public class IfController
 		
 		
 	}
-		 	
+		 	//this is also useless but here because I was practicing things.
 	
 		private void newLoop()
 		{
@@ -162,7 +163,7 @@ public class IfController
 			
 			return isValid;
 		}
-		
+		//me practicing how to ask the user for the price of the car, this isn't used in the main code.
 	
 		private void askUser()
 		{
