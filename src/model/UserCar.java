@@ -119,5 +119,13 @@ public class UserCar
 	{
 		this.color = color;
 	}
+	
+	public String toString()
+	{
+		String description = "My car is the hamburger car from spongebob and has " + wheels + " wheels and costs " + price + " dollars!";
+		
+		return description;
+		
+	}
 
 }

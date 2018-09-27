@@ -21,7 +21,8 @@ public class IfController
 	{
 		//newLoop();
 		//askUser();
-		userStart();
+		//userStart();
+		loopy();
 	}
 	
 	public void userStart()
@@ -35,7 +36,7 @@ public class IfController
 		 
 		 //Asks how many wheels the car has
 		 String wheels = JOptionPane.showInputDialog(null, "How many wheels does " + userCarName + " have?");
-		 JOptionPane.showMessageDialog(null, "Wow " + userCarName + " has " + wheels + "!!! That's pretty neat.");
+		 JOptionPane.showMessageDialog(null, "Wow " + userCarName + " has " + wheels + " wheels!!! That's pretty neat.");
 		 
 		 //Asks if the car has a roof, if yes, tells the user, if not then tells the user it doesn't have one
 		 String roof = JOptionPane.showInputDialog(null, "Is your car a convertible?");
@@ -57,6 +58,16 @@ public class IfController
 			}
 			//assign
 			userCar.setPrice(Double.parseDouble(response));
+			
+			JOptionPane.showMessageDialog(null, userCar);
+			
+			String color = JOptionPane.showInputDialog(null, "What color is " + userCarName + "?");
+			JOptionPane.showMessageDialog(null, "Your car is " + color + "!");
+			
+			String quantity = JOptionPane.showInputDialog(null, "How many of you cars was made in the world? If you don't know guess!");
+			JOptionPane.showMessageDialog(null, "There are only " + quantity + " of your cars ever made. Thats freaking sick if you have one of them");
+			
+			
 				
 		
 			 
@@ -64,6 +75,13 @@ public class IfController
 	
 	private void loopy()
 	{
+		
+		for (int ask = 0; ask < 3; ask += 1)
+		{
+			userStart();
+		}
+		
+		
 		//define variable before loop
 		boolean isDone = false;
 		int count = 0;
@@ -79,6 +97,7 @@ public class IfController
 			}
 			
 		}
+		
 		
 		
 	}
@@ -159,6 +178,7 @@ public class IfController
 			userCar.setPrice(Double.parseDouble(response));
 				
 		}
+		
 		
 	}
 
