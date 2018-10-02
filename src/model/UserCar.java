@@ -16,6 +16,7 @@ public class UserCar
 	private double price;
 	private int quantity;
 	private String color;
+	private int year;
 	
 	/**
 	 * Default constructor for after the fact customization.
@@ -30,6 +31,7 @@ public class UserCar
 		this.price = 15000;
 		this.quantity = 1;
 		this.color = "blue";
+		this.year = 2018;
 		
 		
 	}
@@ -45,7 +47,7 @@ public class UserCar
 	 */
 	
 	
-	public UserCar(String name, int wheels, boolean roof, double price, int quantity, String color)
+	public UserCar(String name, int wheels, boolean roof, double price, int quantity, String color,int year)
 	{
 		this.name = name;
 		this.wheels = wheels;
@@ -53,6 +55,7 @@ public class UserCar
 		this.price = price;
 		this.quantity = quantity;
 		this.color = color;
+		this.year = year;
 	}
 	
 	//---------Getters---------
@@ -87,6 +90,10 @@ public class UserCar
 	{
 		return color;
 	}
+	private int getYear()
+	{
+		return year;
+	}
 	
 	//--------Setters---------
 	
@@ -119,6 +126,7 @@ public class UserCar
 	{
 		this.color = color;
 	}
+	public void setYear(int year)
 	
 	public String toString()
 	{

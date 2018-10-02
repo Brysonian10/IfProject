@@ -22,7 +22,8 @@ public class IfController
 		//newLoop();
 		//askUser();
 		//userStart();
-		loopy();
+		//loopy();
+		anotherLoop();
 	}
 	
 	public void userStart()
@@ -193,6 +194,40 @@ public class IfController
 			String description = "";
 			return description;
 		}
+		
+
+//			public boolean validInt(String maybeInt) 
+//				boolean isValid = false;
+//				try
+//				{
+//					Integer.parseInt(maybeInt);
+//					isValid = true;
+//				}
+//				catch(NumberFormatException error)
+//				{
+//					JOptionPane.showMessageDialog(null,  "Type in a number not a word.");
+//				}
+//				return isValid;
+//		}
+		
+			public void anotherLoop()
+			{
+				int age = 0;
+				String years = JOptionPane.showInputDialog(null, "What year were you born in?");
+				int year = Integer.parseInt(years);
+				if (year < 2018)
+				{
+					while (year < 2018)
+					{
+						year++;
+						age++;
+					}
+					JOptionPane.showMessageDialog(null, "Your age is " + age + ".");
+				}else
+				{
+					JOptionPane.showMessageDialog(null, "gosh dang it don't you lie to me like that, it's a good thing I caught you because I could've died if I tried to figure out how old you are.");
+				}
+			}
 		
 		
 	}
