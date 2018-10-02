@@ -197,6 +197,7 @@ public class IfController
 		
 
 //			public boolean validInt(String maybeInt) 
+//			{
 //				boolean isValid = false;
 //				try
 //				{
