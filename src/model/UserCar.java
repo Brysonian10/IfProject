@@ -127,6 +127,9 @@ public class UserCar
 		this.color = color;
 	}
 	public void setYear(int year)
+	{
+		this.year = year;
+	}
 	
 	public String toString()
 	{
