@@ -243,7 +243,7 @@ public class IfController
 				//great for removing!!!
 				for(int index = myList.size() - 1; index >= 0; index -= 1)
 				{
-					JOptionPane.showMessageDialog(null, "I have " + myList)
+					JOptionPane.showMessageDialog(null, "I have " + myList.get(index));
 					if(index == 1)
 					{
 						myList.remove(1);
