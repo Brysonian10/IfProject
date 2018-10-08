@@ -2,6 +2,7 @@ package controller;
 //importing the JOPtionPane GUI and the model that I made for the User Car.
 import javax.swing.JOptionPane;
 import model.UserCar;
+import java.util.ArrayList;
 
 public class IfController
 {
@@ -227,6 +228,27 @@ public class IfController
 				}else
 				{
 					JOptionPane.showMessageDialog(null, "gosh dang it don't you lie to me like that, it's a good thing I caught you because I could've died if I tried to figure out how old you are.");
+				}
+			}
+			
+			public void forLoops()
+			{
+				ArrayList<String> myList = new ArrayList<String>();
+				myList.add(1, "dogs" );
+				myList.add(2,  "birds" );
+				myList.add(3, "cats" );
+				myList.add(4, "goats" );
+				
+				//starts to move backward through the loop
+				//great for removing!!!
+				for(int index = myList.size() - 1; index >= 0; index -= 1)
+				{
+					JOptionPane.showMessageDialog(null, "I have " + myList)
+					if(index == 1)
+					{
+						myList.remove(1);
+					}
+					
 				}
 			}
 		
