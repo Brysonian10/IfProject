@@ -233,6 +233,10 @@ public class IfController
 			
 			public void forLoops()
 			{
+				/*
+				 * So here the ArrayList called myList has 4 different objects, dogs, birds, cats, and goats. The number in front of it shows what part of the array or the index
+				 * the object is at, basically what order.
+				 */
 				ArrayList<String> myList = new ArrayList<String>();
 				myList.add(1, "dogs" );
 				myList.add(2,  "birds" );
@@ -241,6 +245,11 @@ public class IfController
 				
 				//starts to move backward through the loop
 				//great for removing!!!
+				
+				/*
+				 * This is a for loop that explains that for every time that it comes across an object in the first spot of the 4 indexes, it deletes it and then prints out
+				 * what are left. It does this for as many times as possible until there is no more possible objects to delete or remove from the list.
+				*/
 				for(int index = myList.size() - 1; index >= 0; index -= 1)
 				{
 					JOptionPane.showMessageDialog(null, "I have " + myList.get(index));
